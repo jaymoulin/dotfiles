@@ -1,5 +1,5 @@
 #!/bin/sh
 
-./install_git_aliases.sh
-./install_aliases.sh
-./install_git_config.sh
+./git_aliases.sh
+./aliases.sh
+./git_config.sh
