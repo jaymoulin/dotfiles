@@ -1,5 +1,7 @@
 #!/bin/sh
 
+echo -e "\e[1mInstalling aliases...\e[0m"
+
 echo "alias gid='git diff'" >> ~/.bash_aliases
 echo "alias gis='git status'" >> ~/.bash_aliases
 echo "alias gif='git links'" >> ~/.bash_aliases

@@ -1,5 +1,7 @@
 #!/bin/sh
 
+echo -e "\e[1mInstalling Git aliases...\e[0m"
+
 # Some docs
 # https://hackernoon.com/lesser-known-git-commands-151a1918a60#.j9k9zlwge
 # search alias : https://hackernoon.com/5-git-fundamentals-ded819a34cfe#.4xisjhmqr
