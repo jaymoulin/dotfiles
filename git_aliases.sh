@@ -1,6 +1,6 @@
 #!/bin/sh
 
-echo -e "\e[1mInstalling Git aliases...\e[0m"
+echo "\033[1;31mInstalling Git aliases...\033[0m"
 
 # Some docs
 # https://hackernoon.com/lesser-known-git-commands-151a1918a60#.j9k9zlwge
@@ -20,4 +20,3 @@ git config --global alias.links 'fetch --all --prune'
 git config --global alias.tidy '!git checkout master && git links && git branch --merged | grep -v "\*" | xargs -n 1 git branch -d'
 git config --global alias.z '!git add --all && git stash && git stash drop'
 git config --global alias.ac '!git add --all && git amend'
-

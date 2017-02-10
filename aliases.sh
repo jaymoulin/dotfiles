@@ -1,15 +1,17 @@
 #!/bin/sh
 
-echo -e "\e[1mInstalling aliases...\e[0m"
+echo "\033[1;31mInstalling aliases...\033[0m"
 
-echo "alias gid='git diff'" >> ~/.bash_aliases
-echo "alias gis='git status'" >> ~/.bash_aliases
-echo "alias gif='git links'" >> ~/.bash_aliases
-echo "alias giz='git z'" >> ~/.bash_aliases
-echo "alias gam='git ac'" >> ~/.bash_aliases
-echo "alias gitclean='git tidy'" >> ~/.bash_aliases
-echo "alias rpi='ssh femtopixel.hd.free.fr'" >> ~/.bash_aliases
-
-echo "search() {
-  find . -type f -exec grep -H \"\$1\" {} \; | grep \"\$1\"
-}" >> ~/.bash_aliases
+DIR="$(cd $( dirname $0) && pwd)"
+if [ -f ~/.jay_aliases ]; then
+    rm ~/.jay_aliases
+fi
+if [ ! -f ~/.these_aliases ]; then
+    if [ ! -f ~/.bash_aliases ]; then
+        touch ~/.bash_aliases
+        chmod 644 ~/.bash_aliases
+    fi
+    cp ~/.bash_aliases ~/.these_aliases
+fi
+echo "source ~/.jay_aliases" > ~/.bash_aliases
+ln -sf "$DIR/aliases/.bash_aliases" ~/.jay_aliases

@@ -1,6 +1,6 @@
 #!/bin/sh
 
-echo -e "\e[1mInstalling Git Config...\e[0m"
+echo "\033[1;31mInstalling Git Config...\033[0m"
 
 git config --global user.name "Jay MOULIN"
 git config --global user.email "jaymoulin@gmail.com"
