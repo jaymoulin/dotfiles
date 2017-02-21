@@ -1,6 +1,7 @@
 #!/bin/sh
 
-./git_aliases.sh
-./aliases.sh
-./git_config.sh
-./prompt.sh
+DIR="$(cd $( dirname $0) && pwd)"
+"$DIR/git_aliases.sh"
+"$DIR/aliases.sh"
+"$DIR/git_config.sh"
+"$DIR/prompt.sh"
