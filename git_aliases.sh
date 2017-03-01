@@ -9,8 +9,14 @@ echo "\033[1;31mInstalling Git aliases...\033[0m"
 git config --global alias.please 'push --force-with-lease'
 git config --global alias.amend 'commit --amend --no-edit'
 git config --global alias.it '!git init && git commit -m “root” --allow-empty'
+
+#Stash only unstaged changes to tracked files
 git config --global alias.stsh 'stash --keep-index'
+
+#Stash untracked and tracked files
 git config --global alias.staash 'stash --include-untracked'
+
+#Stash ignored, untracked, and tracked files
 git config --global alias.staaash 'stash --all'
 git config --global alias.shorty 'status --short --branch'
 git config --global alias.merc 'merge --no-ff'
