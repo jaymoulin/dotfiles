@@ -1,6 +1,6 @@
 alias l='ls -la'
 alias gid='git diff'
-alias gis='git status'
+alias gis='git shorty'
 alias gif='git links'
 alias giz='git z'
 alias gam='git ac'
