@@ -11,13 +11,13 @@ git config --global alias.amend 'commit --amend --no-edit'
 #Init a Git repository with an initial empty commit
 git config --global alias.it '!git init && git commit -m “root” --allow-empty'
 
-#
+#Stash only unstaged changes to tracked files
 git config --global alias.stsh 'stash --keep-index'
 
-#
+#Stash untracked and tracked files
 git config --global alias.staash 'stash --include-untracked'
 
-#
+#Stash ignored, untracked, and tracked files
 git config --global alias.staaash 'stash --all'
 
 #Displays a status in condensed format
