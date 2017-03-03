@@ -7,4 +7,5 @@ git config --global user.email "jaymoulin@gmail.com"
 git config --global core.excludesfile ~/.gitignore
 git config --global core.autocrlf input
 git config --global core.eol lf
+git config --global core.editor vim
 cp ./gitconfig/.gitignore ~/.gitignore
