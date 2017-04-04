@@ -27,7 +27,7 @@ git config --global alias.shorty 'status --short --branch'
 git config --global alias.merc 'merge --no-ff'
 
 #Graphical log
-git config --global alias.grog 'log --graph --abbrev-commit'
+git config --global alias.grog "log --graph --pretty=format:'%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%ci) %C(bold blue)<%an>%Creset%n'"
 
 #Search in log for a specific commit message
 git config --global alias.search "log --no-merges -i -E --pretty='%h (%ad) - [%an] %s %d' --date=format:'%b %d %Y' --grep"
