@@ -7,7 +7,7 @@ alias gam='git ac'
 alias gitclean='git tidy'
 alias tb="nc termbin.com 9999"
 alias stable="git checkout master && gif && git pull"
-alias did='git staaash && git checkout -b $1 && git stash pop && git add --all && git commit -am "$2" && git push -u origin $1 && stable'
+alias did='git staaash && git checkout -b $1 && git stash pop && git add --all && git commit -am "[$1] $2" && git push -u origin $1 && stable'
 
 rpi() {
 	if [ 0 != "$#" ]; then
