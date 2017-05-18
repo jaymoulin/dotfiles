@@ -111,4 +111,9 @@ if ! shopt -oq posix; then
   fi
 fi
 
+#Add specific bash completion
+if [ -f ~/.bash_completion ]; then
+    . ~/.bash_completion
+fi
+
 [[ $- = *i* ]] && source ~/.liquidprompt/liquidprompt
