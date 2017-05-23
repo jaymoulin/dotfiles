@@ -1,4 +1,4 @@
-alias l='ls -la'
+alias l='ls -lah'
 
 #short git aliases
 alias gid='git diff'
