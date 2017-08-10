@@ -7,6 +7,7 @@ alias gif='git links'
 alias giz='git z'
 alias gam='git ac'
 alias gitclean='git tidy'
+alias updatedocker='sudo curl -sSL https://get.docker.com | sudo sh'
 
 #cli display share (just | tb)
 alias tb="nc termbin.com 9999"
