@@ -47,3 +47,6 @@ git config --global alias.ac '!git add --all && git amend'
 
 #Delete all distant branches that are merged in master
 git config --global alias.vanish '!git checkout master && git links && git branch -r --merged | grep -v "origin/master" | grep -v "origin/HEAD" | xargs -I "{}" echo "{}" | sed "s/^origin\//origin \:/g" | xargs -I "{}" echo "git push {}" | bash - && git tidy'
+
+#Pull current branch with rebasing method
+git config --global alias.plup '!git fetch && git rebase @{u}'
