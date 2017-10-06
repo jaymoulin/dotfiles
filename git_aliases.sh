@@ -50,3 +50,6 @@ git config --global alias.vanish '!git checkout master && git links && git branc
 
 #Pull current branch with rebasing method
 git config --global alias.up '!git fetch && git rebase @{u}'
+
+#Checkout latest tag
+git config --global alias.latest '!git fetch && git checkout `git tag --sort=v:refname | tail -1`'
