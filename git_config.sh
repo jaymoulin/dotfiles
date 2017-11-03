@@ -13,4 +13,4 @@ git config --global core.eol lf
 git config --global core.editor vim
 git config --global push.default simple
 git config --global push.followTags true
-cp $DIR/gitconfig/.gitignore ~/.gitignore
+ln -sf $DIR/gitconfig/.gitignore ~/.gitignore
