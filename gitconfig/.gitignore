@@ -3,3 +3,5 @@ composer.phar
 *.iml
 vendor
 .vagrant
+node_modules
+npm-debug.log
