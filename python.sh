@@ -3,7 +3,7 @@
 echo "\033[1;31mInstalling Python...\033[0m"
 
 sudo apt-get remove python3-pip -y
-sudo apt-get install python3
+sudo apt-get install python3 -y
 easy_install3 pip
 pip install --upgrade pip
 
