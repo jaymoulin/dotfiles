@@ -10,4 +10,4 @@ git clone https://github.com/estesp/manifest-tool && cd manifest-tool && sudo ma
 
 echo "\033[1;31mInstalling Docker - Multiarch...\033[0m"
 docker run --rm --privileged multiarch/qemu-user-static:register
-sudo apt install -y qemu qemu-user-static qemu-user bin   fmt-support
+sudo apt install -y qemu qemu-user-static qemu-user binfmt-support
