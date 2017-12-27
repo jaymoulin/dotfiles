@@ -1,6 +1,6 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
-echo "\033[1;31mInstalling NPM...\033[0m"
+echo -e "\033[1;31mInstalling NPM...\033[0m"
 
 sudo apt-get install npm -y
 sudo npm i -U -g npm

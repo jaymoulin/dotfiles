@@ -1,6 +1,6 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
-echo "\033[1;31mInstalling Python...\033[0m"
+echo -e "\033[1;31mInstalling Python...\033[0m"
 
 sudo apt-get remove python3-pip -y
 sudo apt-get install python3 -y

@@ -1,6 +1,6 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
-echo "\033[1;31mInstalling Git aliases...\033[0m"
+echo -e "\033[1;31mInstalling Git aliases...\033[0m"
 
 # Force push only if all commits of distant branch were fetched
 git config --global alias.please 'push --force-with-lease'

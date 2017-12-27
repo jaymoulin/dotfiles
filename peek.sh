@@ -1,10 +1,10 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
-echo "\033[1;31mInstalling Peek (screen2gif)...\033[0m"
+echo -e "\033[1;31mInstalling Peek (screen2gif)...\033[0m"
 
-sudo snap install peek
+sudo apt update && sudo apt install snap -y && sudo snap install peek
 
 
-echo "\033[1;31mInstalling Asciinema...\033[0m"
+echo -e "\033[1;31mInstalling Asciinema...\033[0m"
 
 sudo -H pip3 install asciinema

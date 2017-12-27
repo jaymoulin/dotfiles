@@ -1,6 +1,6 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
-echo "\033[1;31mInstalling aliases...\033[0m"
+echo -e "\033[1;31mInstalling aliases...\033[0m"
 
 DIR="$(cd $( dirname $0) && pwd)"
 if [ -f ~/.jay_aliases ]; then
