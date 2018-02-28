@@ -7,7 +7,10 @@ alias gif='git links'
 alias giz='git z'
 alias gam='git ac'
 alias gitclean='git tidy'
+
+#docker aliases
 alias updatedocker='sudo curl -sSL https://get.docker.com | sudo sh'
+alias dkapache='docker run -dit --name `basename $PWD` -p 80:80 -v "$PWD":/usr/local/apache2/htdocs/ httpd:alpine'
 
 #cli display share (just | tb)
 alias tb="nc termbin.com 9999"
