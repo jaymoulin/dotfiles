@@ -5,10 +5,19 @@ DIR="$(cd $( dirname $0) && pwd)"
 "$DIR/aliases.sh"
 "$DIR/git_config.sh"
 "$DIR/home.sh"
-"$DIR/tmux.sh"
 "$DIR/vim.sh"
-"$DIR/docker.sh"
-"$DIR/idea.sh"
-"$DIR/peek.sh"
-"$DIR/python.sh"
-"$DIR/npm.sh"
+
+unameOut="$(uname -s)"
+case "${unameOut}" in
+    Linux*)     machine=Linux;;
+    Darwin*)    machine=Mac;;
+    CYGWIN*)    machine=Cygwin;;
+    MINGW*)     machine=MinGw;;
+    *)          machine="UNKNOWN:${unameOut}"
+esac
+
+if [ $machine == "Linux" ]; then
+    "$DIR/linux/install.sh"
+elif [ $machine == "Linux" ]; then
+    "$DIR/macos/install.sh"
+fi
