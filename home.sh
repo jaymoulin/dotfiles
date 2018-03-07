@@ -13,6 +13,7 @@ fi
 if [ -f ~/.bashrc ]; then
   rm ~/.bashrc
 fi
+ln -sf $DIR/home/.bash_profile ~/.bash_profile
 ln -sf $DIR/home/.bashrc ~/.bashrc
 ln -sf $DIR/home/.bash_completion ~/.bash_completion
 ln -sf $DIR/home/.bash_completions ~/.bash_completions
