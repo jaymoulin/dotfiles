@@ -2,6 +2,7 @@
 
 DIR="$(cd $( dirname $0) && pwd)"
 "$DIR/tmux.sh"
+"$DIR/sshfs.sh"
 "$DIR/docker.sh"
 "$DIR/idea.sh"
 "$DIR/peek.sh"
