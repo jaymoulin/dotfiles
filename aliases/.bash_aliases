@@ -28,4 +28,10 @@ search() {
   find . -type f -exec grep -H "$1" {} \; | grep "$1"
 }
 
+#compress list of pdf
+compresspdf() {
+    mkdir -p compressed
+    for file in `ls *.pdf`; do gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dPDFSETTINGS=/screen -dNOPAUSE -dQUIET -dBATCH -sOutputFile="compressed/${file:0:-4}.pdf" "$file"; done
+}
+
 source ~/.these_aliases
