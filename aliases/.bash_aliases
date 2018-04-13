@@ -34,4 +34,7 @@ compresspdf() {
     for file in `ls *.pdf`; do gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dPDFSETTINGS=/screen -dNOPAUSE -dQUIET -dBATCH -sOutputFile="compressed/${file:0:-4}.pdf" "$file"; done
 }
 
+#Make a sound in CLI
+alias beep="paplay /usr/share/sounds/ubuntu/notifications/Positive.ogg --volume=150000"
+
 source ~/.these_aliases
