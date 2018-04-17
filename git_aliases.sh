@@ -49,7 +49,10 @@ git config --global alias.ac '!git add --all && git amend'
 git config --global alias.vanish '!git checkout master && git links && git branch -r --merged | grep -v "origin/master" | grep -v "origin/HEAD" | xargs -I "{}" echo "{}" | sed "s/^origin\//origin \:/g" | xargs -I "{}" echo "git push {}" | bash - && git tidy'
 
 #Pull current branch with rebasing method
-git config --global alias.up '!git fetch && git rebase @{u}'
+git config --global alias.up 'pull --rebase'
 
 #Checkout latest tag
 git config --global alias.latest '!git fetch && git checkout `git tag --sort=v:refname | tail -1`'
+
+#Put head on the distant
+git config --global alias.dist '!git fetch && git reset --hard @{u}'
