@@ -35,7 +35,7 @@ compresspdf() {
 }
 
 #Make a sound in CLI (e.g.: cat toto && ok || ko)
-alias ok="paplay /usr/share/sounds/ubuntu/notifications/Positive.ogg --volume=150000"
-alias ko="paplay /usr/share/sounds/ubuntu/stereo/service-logout.ogg --volume=150000"
+alias ok="paplay /usr/share/sounds/ubuntu/notifications/Positive.ogg --volume=83000"
+alias ko="paplay /usr/share/sounds/ubuntu/stereo/service-logout.ogg --volume=83000"
 
 source ~/.these_aliases
