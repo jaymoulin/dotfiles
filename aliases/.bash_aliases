@@ -34,6 +34,11 @@ compresspdf() {
     for file in `ls *.pdf`; do gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dPDFSETTINGS=/screen -dNOPAUSE -dQUIET -dBATCH -sOutputFile="compressed/${file:0:-4}.pdf" "$file"; done
 }
 
+#Update all pip packages
+pipup() {
+    sudo -H pip freeze — local | grep -v ‘^\-e’ | cut -d = -f 1 | xargs -n1 sudo -H pip install -U
+}
+
 #Make a sound in CLI (e.g.: cat toto && ok || ko)
 alias ok="paplay /usr/share/sounds/ubuntu/notifications/Positive.ogg --volume=83000"
 alias ko="paplay /usr/share/sounds/ubuntu/stereo/service-logout.ogg --volume=83000"
