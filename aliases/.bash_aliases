@@ -23,11 +23,6 @@ tmpfile=$( mktemp -t transferXXX ); if tty -s; then basefile=$(basename "$1" | s
 alias stable="git checkout master && gif && git pull"
 alias did='git staaash && git checkout -b $1 && git stash pop && git add --all && git commit -am "[$1] $2" && git push -u origin $1 && stable'
 
-#search in files
-search() {
-  find . -type f -exec grep -H "$1" {} \; | grep "$1"
-}
-
 #compress list of pdf
 compresspdf() {
     mkdir -p compressed
