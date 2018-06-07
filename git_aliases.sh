@@ -55,4 +55,4 @@ git config --global alias.up 'pull --rebase'
 git config --global alias.latest '!git fetch && git checkout `git tag --sort=v:refname | tail -1`'
 
 #Put head on the distant
-git config --global alias.dist '!git fetch && git reset --hard @{u}'
+git config --global alias.dist '!git fetch `git rev-parse --symbolic-full-name --abbrev-ref @{upstream} | sed "s!/! !"` && git reset --hard @{u}'
