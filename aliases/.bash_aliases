@@ -22,7 +22,7 @@ tmpfile=$( mktemp -t transferXXX ); if tty -s; then basefile=$(basename "$1" | s
 #git coding
 alias stable="git checkout master && gif && git pull"
 did() { 
-    git staaash && git checkout -b $1 && git stash pop && git add --all && git commit -am "[$1] $2" && git push -u origin $1 && stable
+    git stash && git checkout -b $1 && git stash pop && git add --all && git commit -am "[$1] $2" && git push -u origin $1 && stable
 }
 
 #compress list of pdf
