@@ -15,5 +15,6 @@ if [ -f ~/.bashrc ]; then
 fi
 ln -sf $DIR/home/.bash_profile ~/.bash_profile
 ln -sf $DIR/home/.bashrc ~/.bashrc
+ln -sf $DIR/home/.tmux.conf ~/.tmux.conf
 ln -sf $DIR/home/.bash_completion ~/.bash_completion
 ln -sf $DIR/home/.bash_completions ~/.bash_completions
