@@ -24,6 +24,9 @@ alias stable="git checkout master && git up"
 did() { 
     git stash && git checkout -b $1 && git stash pop && git add --all && git commit -am "[#$1] $2" && git push -u origin $1 && stable
 }
+fix() { 
+    git stash && git checkout -b fix-$RANDOM && git stash pop && git add --all && git commit -am "$1" && git push -u origin $1 && stable
+}
 
 #compress list of pdf
 compresspdf() {
