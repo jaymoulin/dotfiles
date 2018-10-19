@@ -46,7 +46,8 @@ ko() {
     return 1
 }
 
-#Load tmuxx active session or creates a new one
+#Load tmux active session or creates a new one
 alias mux='tmux a || tmux'
 
+source ~/.local/bin/bashmarks.sh
 source ~/.these_aliases
