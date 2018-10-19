@@ -41,7 +41,10 @@ pipup() {
 
 #Make a sound in CLI (e.g.: cat toto && ok || ko)
 alias ok="paplay /usr/share/sounds/ubuntu/notifications/Positive.ogg --volume=83000"
-alias ko="paplay /usr/share/sounds/ubuntu/stereo/service-logout.ogg --volume=83000"
+ko() {
+    paplay /usr/share/sounds/ubuntu/stereo/service-logout.ogg --volume=83000
+    return 1
+}
 
 #Load tmuxx active session or creates a new one
 alias mux='tmux a || tmux'
