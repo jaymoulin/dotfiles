@@ -7,7 +7,12 @@ DIR="$(cd $( dirname $0) && pwd)"
 if [ ! -d ~/.liquidprompt ]; then
   git clone https://github.com/nojhan/liquidprompt.git ~/.liquidprompt
 else
-  cd ~/.liquidprompt && git pull
+  cd ~/.liquidprompt && git pull && cd -
+fi
+if [ ! -d ~/.bashmarks ]; then
+  git clone https://github.com/huyng/bashmarks.git ~/.bashmarks && cd ~/.bashmarks && make install && cd -
+else
+  cd ~/.bashmarks && git pull && cd -
 fi
 
 if [ -f ~/.bashrc ]; then
