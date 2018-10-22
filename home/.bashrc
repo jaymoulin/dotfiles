@@ -124,3 +124,4 @@ if [ -f ~/.bash_completion ]; then
 fi
 
 [[ $- = *i* ]] && source ~/.liquidprompt/liquidprompt
+
