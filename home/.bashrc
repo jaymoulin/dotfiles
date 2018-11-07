@@ -123,5 +123,7 @@ if [ -f ~/.bash_completion ]; then
     . ~/.bash_completion
 fi
 
+VISUAL=vi
+
 [[ $- = *i* ]] && source ~/.liquidprompt/liquidprompt
 
