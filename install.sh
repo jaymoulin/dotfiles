@@ -18,6 +18,6 @@ esac
 
 if [ $machine == "Linux" ]; then
     "$DIR/linux/install.sh"
-elif [ $machine == "Linux" ]; then
+elif [ $machine == "Mac" ]; then
     "$DIR/macos/install.sh"
 fi
