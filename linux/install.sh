@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
 DIR="$(cd $( dirname $0) && pwd)"
+"$DIR/make.sh"
 "$DIR/tmux.sh"
 "$DIR/git.sh"
 "$DIR/sshfs.sh"
