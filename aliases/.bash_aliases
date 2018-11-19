@@ -27,6 +27,9 @@ did() {
 fix() { 
     git stash && git checkout -b fix-$RANDOM && git stash pop && git add --all && git commit -am "$1" && git push -u origin $1 && stable
 }
+gfix() {
+    gam && git please
+}
 
 #compress list of pdf
 compresspdf() {
