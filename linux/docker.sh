@@ -8,6 +8,15 @@ echo -e "\033[1;31mInstalling Docker - Manifest-Tool...\033[0m"
 git clone https://github.com/estesp/manifest-tool && cd manifest-tool && sudo make && sudo make install && cd .. && \
  rm -Rf manifest-tool
 
+echo -e "/var/lib/docker/containers/*/*.log {
+  rotate 7
+  daily
+  compress
+  size=1M
+  missingok
+  delaycompress
+  copytruncate
+}" | sudo tee --append /etc/logrotate.d/docker-container
 #echo -e "\033[1;31mInstalling Docker - Multiarch...\033[0m"
 #sudo apt install -y qemu qemu-user-static qemu-user binfmt-support
 #docker run --rm --privileged multiarch/qemu-user-static:register
