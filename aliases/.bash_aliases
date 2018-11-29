@@ -24,8 +24,9 @@ alias stable="git checkout master && git up; git tidy; git vanish"
 did() { 
     git stash && git checkout -b $1 && git stash pop && git add --all && git commit -am "[#$1] $2" && git push -u origin $1 && stable
 }
-fix() { 
-    git stash && git checkout -b fix-$RANDOM && git stash pop && git add --all && git commit -am "$1" && git push -u origin $1 && stable
+fix() {
+    branch=`echo fix-$RANDOM`
+    git add . && git stash && git checkout -b $branch && git stash pop && git add --all && git commit -am "$1" && git push -u origin $branch && stable
 }
 gfix() {
     gam && git please
