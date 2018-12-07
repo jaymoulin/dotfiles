@@ -37,7 +37,7 @@ git config --global alias.search "log --no-merges -i -E --pretty='%h (%ad) - [%a
 git config --global alias.links 'fetch --all --prune'
 
 #Delete local branches that are merged into master
-git config --global alias.tidy '!git checkout master && git links && git branch --merged | grep -v "\*" | xargs -n 1 git branch -d'
+git config --global alias.tidy '!git checkout master && git links && git branch --merged | grep -v "\*" | xargs -n 1 git branch -d; true'
 
 #Remove all local modifications
 git config --global alias.z '!git add --all && git stash && git stash drop'
