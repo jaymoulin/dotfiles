@@ -17,6 +17,9 @@ echo -e "/var/lib/docker/containers/*/*.log {
   delaycompress
   copytruncate
 }" | sudo tee --append /etc/logrotate.d/docker-container
+
+sudo curl -L https://raw.githubusercontent.com/docker/compose/1.23.2/contrib/completion/bash/docker-compose -o /etc/bash_completion.d/docker-compose
+
 #echo -e "\033[1;31mInstalling Docker - Multiarch...\033[0m"
 #sudo apt install -y qemu qemu-user-static qemu-user binfmt-support
 #docker run --rm --privileged multiarch/qemu-user-static:register
