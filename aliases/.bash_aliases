@@ -53,5 +53,8 @@ ko() {
 #Load tmux active session or creates a new one
 alias mux='tmux a || tmux'
 
+#Update all OS dependencies
+alias osupgrade='sudo bash -c "apt update && apt upgrade -y && apt dist-upgrade -y && apt autoremove -y"'
+
 source ~/.local/bin/bashmarks.sh
 source ~/.these_aliases
