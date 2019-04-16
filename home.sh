@@ -21,6 +21,9 @@ fi
 if [ -f ~/.bash_completions ]; then
   rm ~/.bash_completions
 fi
+mkdir -p ~/.config/Code/
+ln -sf $DIR/home/.vscode ~/.vscode
+ln -sf $DIR/home/.config/Code/User ~/.config/Code/User
 ln -sf $DIR/home/.bash_profile ~/.bash_profile
 ln -sf $DIR/home/.bashrc ~/.bashrc
 ln -sf $DIR/home/.tmux.conf ~/.tmux.conf

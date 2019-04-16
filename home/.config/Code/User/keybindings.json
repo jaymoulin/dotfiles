@@ -1,0 +1,8 @@
+// Place your key bindings in this file to override the defaultsauto[]
+[
+    {
+        "key": "alt+f7",
+        "command": "-references-view.find",
+        "when": "editorHasReferenceProvider"
+    }
+]

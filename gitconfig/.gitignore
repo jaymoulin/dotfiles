@@ -1,4 +1,6 @@
 composer.phar
+.vscode
+.history
 .idea
 *.iml
 .vagrant
