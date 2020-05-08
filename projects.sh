@@ -45,7 +45,7 @@ github=(
 
 gitlab=(
     git@gitlab.com:jaymoulin/docker-autobuilder
-    git@gitlab.com:femtopixel/www
+    git@gitlab.com:femtopixel/jaymoulin.me
     git@gitlab.com:femtopixel/docker-kompose
     git@gitlab.com:femtopixel/mur
     git@gitlab.com:femtopixel/gitlab-release-notifier
