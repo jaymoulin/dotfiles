@@ -20,12 +20,12 @@ echo -e "/var/lib/docker/containers/*/*.log {
 
 sudo curl -L https://raw.githubusercontent.com/docker/compose/1.23.2/contrib/completion/bash/docker-compose -o /etc/bash_completion.d/docker-compose
 
-#echo -e "\033[1;31mInstalling Docker - Multiarch...\033[0m"
-#sudo apt install -y qemu qemu-user-static qemu-user binfmt-support
-#docker run --rm --privileged multiarch/qemu-user-static:register
+echo -e "\033[1;31mInstalling Docker - Multiarch...\033[0m"
+sudo apt install -y qemu qemu-user-static qemu-user binfmt-support
+docker run --rm --privileged multiarch/qemu-user-static:register
 
-#git clone https://github.com/computermouth/qemu-static-conf.git
-#sudo mkdir -p /lib/binfmt.d
-#sudo cp qemu-static-conf/*.conf /lib/binfmt.d/
-#sudo systemctl restart systemd-binfmt.service
-#rm -Rf qemu-static-conf
+git clone https://github.com/computermouth/qemu-static-conf.git
+sudo mkdir -p /lib/binfmt.d
+sudo cp qemu-static-conf/*.conf /lib/binfmt.d/
+sudo systemctl restart systemd-binfmt.service
+rm -Rf qemu-static-conf
