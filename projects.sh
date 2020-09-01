@@ -21,8 +21,7 @@ github=(
     git@github.com:jaymoulin/google-music-manager-uploader
     git@github.com:jaymoulin/google-music-manager-downloader
     git@github.com:jaymoulin/google-music-manager-auth
-    git@github.com:jaymoulin/youtube_music_uploader.git
-    git@github.com:jaymoulin/youtube_music_auth.git
+    git@github.com:jaymoulin/youtube-music-uploader.git
     git@github.com:femtopixel/docker-google-lighthouse-puppeteer
     git@github.com:femtopixel/google-lighthouse-puppeteer
     git@github.com:femtopixel/google-lighthouse-puppeteer-cli-dashboard
