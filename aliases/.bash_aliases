@@ -20,7 +20,7 @@ transfer() { if [ $# -eq 0 ]; then echo -e "No arguments specified. Usage:\necho
 tmpfile=$( mktemp -t transferXXX ); if tty -s; then basefile=$(basename "$1" | sed -e 's/[^a-zA-Z0-9._-]/-/g'); curl --progress-bar --upload-file "$1" "https://transfer.sh/$basefile" >> $tmpfile; else curl --progress-bar --upload-file "-" "https://transfer.sh/$1" >> $tmpfile ; fi; cat $tmpfile; rm -f $tmpfile; } 
 
 #git coding
-alias stable="git checkout master && git up; git tidy; git vanish"
+alias stable="git checkout master || git checkout main; git up; git tidy; git vanish"
 did() { 
     git stash && git checkout -b $1 && git stash pop && git add --all && git commit -am "[#$1] $2" && git push -u origin $1 && stable
 }
