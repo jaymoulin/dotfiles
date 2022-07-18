@@ -58,7 +58,7 @@ alias mux='tmux a || tmux'
 alias osupgrade='sudo bash -c "apt update && apt upgrade -y && apt dist-upgrade -y && apt autoremove -y"'
 
 #Updates all repos in projects (with a namespace first)
-alias pup='cd ~/projects; for d in *; do cd $d; for f in *; do cd $f; echo $f; stable; cd ..; done; cd ..; done;'
+alias pup='cd ~/projects; for d in *; do cd $d && echo -e "\033[32m$d\033[00m"; for f in *; do (cd $f && echo -e "\033[31m$f\033[00m" && (stable && cd .. || cd ..)); done; cd ..; done;'
 
 source ~/.local/bin/bashmarks.sh
 source ~/.these_aliases
