@@ -36,8 +36,8 @@ git config --global alias.search "log --no-merges -i -E --pretty='%h (%ad) - [%a
 #Refresh links between local and distant repository + prune thoses links
 git config --global alias.links 'fetch --all --prune'
 
-#Delete local branches that are merged into master
-git config --global alias.tidy '!git checkout master && git links && git branch --merged | grep -v "\*" | xargs -n 1 git branch -d; true'
+#Delete local branches that are merged into master/main
+git config --global alias.tidy '!(git checkout master || git checkout main)&& git links && git branch --merged | grep -v "\*" | xargs -n 1 git branch -d; true'
 
 #Remove all local modifications
 git config --global alias.z '!git add --all && git stash && git stash drop'
@@ -45,8 +45,8 @@ git config --global alias.z '!git add --all && git stash && git stash drop'
 #Add all modifications in the last commit without changing its commit message
 git config --global alias.ac '!git add --all && git amend'
 
-#Delete all distant branches that are merged in master
-git config --global alias.vanish '!git checkout master && git links && git branch -r --merged | grep -v "origin/master" | grep -v "origin/HEAD" | xargs -I "{}" echo "{}" | sed "s/^origin\//origin \:/g" | xargs -I "{}" echo "git push {}" | bash - && git tidy'
+#Delete all distant branches that are merged in master/main
+git config --global alias.vanish '!(git checkout master || git checkout main) && git links && git branch -r --merged | grep -v "origin/master" | grep -v "origin/main" | grep -v "origin/HEAD" | xargs -I "{}" echo "{}" | sed "s/^origin\//origin \:/g" | xargs -I "{}" echo "git push {}" | bash - && git tidy'
 
 #Pull current branch with rebasing method
 git config --global alias.up 'pull --rebase'
