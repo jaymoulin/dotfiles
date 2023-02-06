@@ -15,6 +15,7 @@ github=(
 )
 
 gitlab=(
+    git@gitlab.com:femtopixel/brands.jaymoulin.me
     git@gitlab.com:femtopixel/jaymoulin.me
     git@gitlab.com:jaymoulin/keeptune
     git@gitlab.com:jaymoulin/mop-rpi
