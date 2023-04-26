@@ -10,7 +10,7 @@ alias gitclean='git tidy'
 
 #docker aliases
 alias updatedocker='sudo curl -sSL https://get.docker.com | sudo sh'
-alias dkapache='docker run -dit --name `basename $PWD` -p 80:80 -v "$PWD":/usr/local/apache2/htdocs/ httpd:alpine'
+alias dkapache='docker run -dit --name `basename $PWD` -p 80:80 -v "$PWD":/media/ -w /media/ python:3-alpine python3 -m http.server 80'
 
 #cli display share (just | tb)
 alias tb="nc termbin.com 9999"
