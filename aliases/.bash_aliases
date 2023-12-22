@@ -1,4 +1,5 @@
 alias l='ls -lah'
+alias model='cat /sys/firmware/devicetree/base/model'
 
 #short git aliases
 alias gid='git diff'
