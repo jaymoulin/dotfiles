@@ -18,3 +18,5 @@ echo -e "/var/lib/docker/containers/*/*.log {
   copytruncate
 }" | sudo tee --append /etc/logrotate.d/docker-container
 
+echo -e '{"log-driver": "json-file", "log-opts": {"max-size": "10m", "max-file": "3"}}' | sudo tee --append /etc/docker/daemon.json
+sudo service docker restart
