@@ -9,17 +9,6 @@ alias giz='git z'
 alias gam='git ac'
 alias gitclean='git tidy'
 
-#docker aliases
-alias updatedocker='sudo curl -sSL https://get.docker.com | sudo sh'
-alias dkapache='docker run -dit --name `basename $PWD` -p 80:80 -v "$PWD":/media/ -w /media/ python:3-alpine python3 -m http.server 80'
-
-#cli display share (just | tb)
-alias tb="nc termbin.com 9999"
-
-#cli file share tool (transfer path/to/file.sh)
-transfer() { if [ $# -eq 0 ]; then echo -e "No arguments specified. Usage:\necho transfer /tmp/test.md\ncat /tmp/test.md | transfer test.md"; return 1; fi 
-tmpfile=$( mktemp -t transferXXX ); if tty -s; then basefile=$(basename "$1" | sed -e 's/[^a-zA-Z0-9._-]/-/g'); curl --progress-bar --upload-file "$1" "https://transfer.sh/$basefile" >> $tmpfile; else curl --progress-bar --upload-file "-" "https://transfer.sh/$1" >> $tmpfile ; fi; cat $tmpfile; rm -f $tmpfile; } 
-
 #git coding
 alias stable="git checkout master || git checkout main; git up; git tidy; git vanish"
 did() { 
@@ -32,6 +21,16 @@ fix() {
 gfix() {
     gam && git please
 }
+
+#docker aliases
+alias dkapache='docker run -dit --name `basename $PWD` -p 80:80 -v "$PWD":/media/ -w /media/ python:3-alpine python3 -m http.server 80'
+
+#cli display share (just | tb)
+alias tb="nc termbin.com 9999"
+
+#cli file share tool (transfer path/to/file.sh)
+transfer() { if [ $# -eq 0 ]; then echo -e "No arguments specified. Usage:\necho transfer /tmp/test.md\ncat /tmp/test.md | transfer test.md"; return 1; fi 
+tmpfile=$( mktemp -t transferXXX ); if tty -s; then basefile=$(basename "$1" | sed -e 's/[^a-zA-Z0-9._-]/-/g'); curl --progress-bar --upload-file "$1" "https://transfer.sh/$basefile" >> $tmpfile; else curl --progress-bar --upload-file "-" "https://transfer.sh/$1" >> $tmpfile ; fi; cat $tmpfile; rm -f $tmpfile; } 
 
 #compress list of pdf
 compresspdf() {
@@ -60,6 +59,21 @@ alias osupgrade='sudo bash -c "apt update && apt upgrade -y && apt dist-upgrade 
 
 #Updates all repos in projects (with a namespace first)
 alias pup='cd ~/projects; for d in *; do cd $d && echo -e "\033[32m$d\033[00m"; for f in *; do (cd $f && echo -e "\033[31m$f\033[00m" && (stable && cd .. || cd ..)); done; cd ..; done;'
+
+#Add command to create Makefil with included help tool
+do-makefile() {
+    if [ -f Makefile ]; then
+        echo -e "Makefile already exists, exiting"
+        return 1
+    else
+        echo -e "# Add the following 'help' target to your Makefile 
+# And add help text after each target name starting with '\#\#'
+.PHONY: help
+
+help: ## Show this help
+\t@fgrep -h \"##\" \$(MAKEFILE_LIST) | fgrep -v fgrep | sed -e 's/\\\\\\\\\$\$//' | sed -e 's/##//'" > Makefile
+    fi
+}
 
 source ~/.local/bin/bashmarks.sh
 source ~/.these_aliases
